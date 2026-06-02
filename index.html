@@ -962,6 +962,227 @@
     .footer-top { grid-template-columns: 1fr; gap: 1.5rem; }
     .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
   }
+
+  /* ── ENQUIRY FORM ── */
+  #contact {
+    padding: 6rem 6rem;
+    background: white;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .contact-left {}
+  .contact-left .section-sub { margin-bottom: 2rem; }
+
+  .contact-info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .info-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    background: var(--cream);
+    border-radius: 16px;
+    border: 1px solid rgba(244,167,185,0.15);
+  }
+  .info-card-icon {
+    width: 42px; height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .info-card-text h4 {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 0.15rem;
+  }
+  .info-card-text p {
+    font-size: 0.78rem;
+    color: var(--mid);
+  }
+  .info-card-text a {
+    font-size: 0.78rem;
+    color: var(--aqua-deep);
+    text-decoration: none;
+  }
+  .info-card-text a:hover { text-decoration: underline; }
+
+  /* Form */
+  .enquiry-form {
+    background: var(--cream);
+    border-radius: 28px;
+    padding: 2.5rem;
+    border: 1px solid rgba(244,167,185,0.15);
+    box-shadow: 0 10px 50px rgba(244,167,185,0.1);
+  }
+  .form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-bottom: 0.4rem;
+  }
+  .form-title em { font-style: italic; color: var(--pink-deep); }
+  .form-sub {
+    font-size: 0.82rem;
+    color: var(--mid);
+    margin-bottom: 1.8rem;
+    line-height: 1.5;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+  .form-group.full { grid-column: span 2; }
+  .form-group label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--mid);
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.8rem 1rem;
+    border: 1.5px solid rgba(244,167,185,0.25);
+    border-radius: 12px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.88rem;
+    color: var(--dark);
+    background: white;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--pink-deep);
+    box-shadow: 0 0 0 3px rgba(224,99,138,0.1);
+  }
+  .form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237A5566' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+    cursor: pointer;
+  }
+  .form-group textarea {
+    resize: vertical;
+    min-height: 110px;
+    line-height: 1.6;
+  }
+
+  .form-datetime {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--pink-light);
+    border-radius: 12px;
+  }
+  .form-checkbox-group input[type="checkbox"] {
+    width: 18px; height: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    accent-color: var(--pink-deep);
+    cursor: pointer;
+  }
+  .form-checkbox-group label {
+    font-size: 0.8rem;
+    color: var(--mid);
+    line-height: 1.5;
+    cursor: pointer;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .form-checkbox-group label a {
+    color: var(--pink-deep);
+    text-decoration: none;
+  }
+
+  .form-submit {
+    width: 100%;
+    background: linear-gradient(135deg, var(--pink-deep), var(--aqua-deep));
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.88rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+    box-shadow: 0 8px 30px rgba(224,99,138,0.3);
+  }
+  .form-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(224,99,138,0.4);
+  }
+  .form-submit:active { transform: translateY(0); }
+
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+  .form-success-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .form-success h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+  }
+  .form-success h3 em { font-style: italic; color: var(--pink-deep); }
+  .form-success p {
+    font-size: 0.88rem;
+    color: var(--mid);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    #contact { padding: 3rem 2rem; }
+    .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .form-datetime { grid-template-columns: 1fr; }
+    .form-group.full { grid-column: span 1; }
+  }
+
 </style>
 </head>
 <body>
@@ -985,7 +1206,8 @@
     <li><a href="#about">About</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#faq">FAQ</a></li>
-    <li><a href="#faq" class="nav-cta">Book Now</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-cta">Book Now</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -1258,6 +1480,149 @@
   </div>
 </section>
 
+
+<!-- ── ENQUIRY FORM ── -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-left reveal">
+      <span class="section-label">✦ Get in Touch</span>
+      <h2 class="section-title">Make an <em>Enquiry</em></h2>
+      <p class="section-sub">Not ready to book online just yet? Send me a message and I'll get back to you within 24 hours to chat through your treatment and find a time that works for you. 💕</p>
+
+      <div class="contact-info-cards">
+        <div class="info-card">
+          <div class="info-card-icon icon-pink">📍</div>
+          <div class="info-card-text">
+            <h4>Location</h4>
+            <p>Auckland, New Zealand</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon icon-aqua">📸</div>
+          <div class="info-card-text">
+            <h4>Instagram</h4>
+            <a href="https://instagram.com/beautyby_the_c/" target="_blank">@beautyby_the_c</a>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon icon-pink">⏰</div>
+          <div class="info-card-text">
+            <h4>Hours</h4>
+            <p>Monday – Saturday, 9am – 6pm</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon icon-aqua">💬</div>
+          <div class="info-card-text">
+            <h4>Response Time</h4>
+            <p>Within 24 hours</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="enquiry-form" id="enquiry-form-wrap">
+        <!-- FORM -->
+        <div id="form-content">
+          <h3 class="form-title">Book an <em>Appointment</em></h3>
+          <p class="form-sub">Fill in the details below and Cary will be in touch to confirm your booking. ✨</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-first">First Name *</label>
+              <input type="text" id="f-first" placeholder="e.g. Sarah" required>
+            </div>
+            <div class="form-group">
+              <label for="f-last">Last Name *</label>
+              <input type="text" id="f-last" placeholder="e.g. Johnson" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-email">Email Address *</label>
+              <input type="email" id="f-email" placeholder="you@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="f-phone">Phone / WhatsApp</label>
+              <input type="tel" id="f-phone" placeholder="+64 21 000 0000">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="f-service">Service You're Interested In *</label>
+            <select id="f-service" required>
+              <option value="" disabled selected>Select a service...</option>
+              <optgroup label="✨ Facials">
+                <option>Express Glow Facial — $65</option>
+                <option>Classic Cleanse & Hydrate — $90</option>
+                <option>Deluxe Anti-Aging Facial — $120</option>
+                <option>Bespoke Signature Facial — $150</option>
+                <option>LED Light Therapy Add-on — $30</option>
+              </optgroup>
+              <optgroup label="💆 Massages">
+                <option>Relaxation Massage (30 min) — $55</option>
+                <option>Full Body Massage (60 min) — $95</option>
+                <option>Hot Stone Massage — $120</option>
+                <option>Aromatherapy Massage — $110</option>
+                <option>Couples Massage — $90 each</option>
+              </optgroup>
+              <optgroup label="💄 Makeovers & Beauty">
+                <option>Everyday Makeup Look — $75</option>
+                <option>Bridal & Event Glam — $160</option>
+                <option>Lash Tint & Lift — $80</option>
+                <option>Brow Shape & Tint — $45</option>
+                <option>Full Pamper Package — $220</option>
+              </optgroup>
+              <option>Not sure yet — I'd like advice</option>
+            </select>
+          </div>
+
+          <div class="form-datetime">
+            <div class="form-group">
+              <label for="f-date">Preferred Date *</label>
+              <input type="date" id="f-date" required>
+            </div>
+            <div class="form-group">
+              <label for="f-time">Preferred Time</label>
+              <select id="f-time">
+                <option value="" disabled selected>Select a time...</option>
+                <option>Morning (9am – 12pm)</option>
+                <option>Midday (12pm – 2pm)</option>
+                <option>Afternoon (2pm – 5pm)</option>
+                <option>Late afternoon (5pm – 6pm)</option>
+                <option>Flexible — any time works</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="f-notes">Skin / Health Notes or Questions</label>
+            <textarea id="f-notes" placeholder="e.g. I have sensitive skin, I'm allergic to..., I'd love to know more about... Any special occasion? Let Cary know! 🌸"></textarea>
+          </div>
+
+          <div class="form-checkbox-group">
+            <input type="checkbox" id="f-consent" required>
+            <label for="f-consent">I understand this is an enquiry form and that Cary will contact me to confirm my appointment. A deposit may be required to secure my booking.</label>
+          </div>
+
+          <button class="form-submit" onclick="submitEnquiry()">Send My Enquiry 💕</button>
+        </div>
+
+        <!-- SUCCESS STATE -->
+        <div class="form-success" id="form-success">
+          <div class="form-success-icon">🌸</div>
+          <h3>Thank you, <em id="success-name">lovely</em>!</h3>
+          <p>Your enquiry has been sent to Cary. She'll be in touch within 24 hours to confirm your appointment.<br><br>In the meantime, follow along on Instagram for inspo! 💕</p>
+          <br>
+          <a href="https://instagram.com/beautyby_the_c/" target="_blank" class="btn-primary" style="display:inline-block;margin-top:0.5rem;">Visit @beautyby_the_c</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── FOOTER ── -->
 <footer>
   <div class="footer-top">
@@ -1365,6 +1730,43 @@ document.getElementById('logo-input').addEventListener('change', function() {
 
 // Example: set your Instagram URL
 // document.querySelectorAll('#ig-link, #footer-ig, #fs-ig').forEach(a => a.href = 'https://instagram.com/youraccount');
+</script>
+
+
+<script>
+// Set min date to today for date picker
+const dateInput = document.getElementById('f-date');
+if (dateInput) {
+  const today = new Date().toISOString().split('T')[0];
+  dateInput.setAttribute('min', today);
+}
+
+function submitEnquiry() {
+  const first = document.getElementById('f-first').value.trim();
+  const last = document.getElementById('f-last').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const service = document.getElementById('f-service').value;
+  const date = document.getElementById('f-date').value;
+  const consent = document.getElementById('f-consent').checked;
+
+  if (!first || !last || !email || !service || !date) {
+    alert('Please fill in all required fields (marked with *)');
+    return;
+  }
+  if (!consent) {
+    alert('Please confirm you understand this is an enquiry form.');
+    return;
+  }
+  if (!/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+  // Show success
+  document.getElementById('form-content').style.display = 'none';
+  document.getElementById('form-success').style.display = 'block';
+  document.getElementById('success-name').textContent = first;
+}
 </script>
 
 </body>
